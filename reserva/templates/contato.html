@@ -1,0 +1,30 @@
+{% extends "inicio.html" %}
+    {% load bootstrap5 %}
+    {% block principal %}
+    <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; display: flex; justify-content: center; margin: 30px;">Fale Conosco</h1>
+    <p>
+      Envie uma mensagem através deste forumulário abaixo ou ligue para o telefone: {{ telefone }}
+      falando com o responsável - {{nome|upper}}
+    </p>
+    {% if sucesso %}
+    <p class="alert alert-success">Mensagem enviada com sucesso!</p>
+    {% else %}
+    <form action="" method="post" id="form" novalidate>
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <hr>
+      <button type="submit" class="enviar">Enviar Mensagem</button>
+    </form>
+    {% endif %}
+    {% endblock %}
+  <footer class="pt-5 my-5 text-muted border-top">
+    Curso Python Ultima School
+  </footer>
+</div>
+
+
+    <script src="/static/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

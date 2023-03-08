@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet Online - Reserve já o banho do seu pet</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="/static/starter-template.css" rel="stylesheet">
+  </head>
+  <body style="background: #c2c2c29c;">
+    
+<div class="col-lg-8 mx-auto p-4 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <span class="fs-4">Pet - Online</span>
+    </a>
+    <div class="contato">
+    <a id="id_contato" class=" col-md-12" href="/contato/">Contato</a>
+    </div>
+  </header>
+
+  <main>
+    {% block principal %}
+    <h1 style="margin-bottom: 40px;">Reserve já o banho do seu pet</h1>
+    
+    <div id="botao"><button onclick="location.href='/reserva/criar/'" role="button">Reservar</button></div>
+    {% endblock %}
+  </main>
+  <footer class="pt-5 my-5 text-muted border-top">
+    Curso Python Ultima School
+  </footer>
+</div>
+
+
+    <script src="/static/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

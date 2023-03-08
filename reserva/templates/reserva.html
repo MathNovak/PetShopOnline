@@ -1,0 +1,14 @@
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+{% block principal %}
+    {% if sucesso %}
+    <p class="alert alert-success">Reserva realizada com sucesso, em breve entraremos em contato!</p>
+    {% else %}
+<form action="" method="post" id="form" novalidate>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <hr>
+      <button type="submit" class="enviar">Reservar</button>
+</form>
+{% endif %}
+{% endblock %}
