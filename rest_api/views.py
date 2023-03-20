@@ -5,13 +5,20 @@ from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 from rest_api.serializers import AgendamentoModelSerializer
 
 from reserva.models import Reserva
 
+
+
 class AgendamentoModelViewSet(ModelViewSet):
     queryset = Reserva.objects.all()
     serializer_class = AgendamentoModelSerializer
+    authentication_classes = [TokenAuthentication]
+    permissions_classes = [IsAuthenticatedOrReadOnly]
 
 @api_view()
 def reservas(request):
