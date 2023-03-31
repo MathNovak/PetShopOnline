@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
-from rest_framework import BaseCommand6
+from rest_framework import BaseCommand
 
 class Command(BaseCommand):
     help = 'Cria um novo token para ser usado'

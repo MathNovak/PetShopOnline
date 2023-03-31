@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'rest_api',
 ]
 
-from rest_framework.authtoken.models import Token
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,7 +139,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.TokenAuthentication',
-        'rest_framwork.authentication.SessionAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ]
 
 }

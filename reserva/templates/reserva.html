@@ -6,7 +6,7 @@
     {% else %}
 <form action="" method="post" id="form" novalidate>
     {% csrf_token %}
-    {% bootstrap_form form %}
+{% bootstrap_form form %}   
     <hr>
       <button type="submit" class="enviar">Reservar</button>
 </form>

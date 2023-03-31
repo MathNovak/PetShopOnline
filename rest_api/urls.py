@@ -1,11 +1,12 @@
 from django.urls import path,include
-from rest_api.views import reservas, adicionar_reserva, AgendamentoModelViewSet
+from rest_api.views import reservas, adicionar_reserva, AgendamentoModelViewSet, PetshopModelViewSet
 from rest_framework.routers import SimpleRouter
 
 app_name = 'rest_api'
 
 router = SimpleRouter(trailing_slash=False)
 router.register('agendamento', AgendamentoModelViewSet)
+router.register('petshop', PetshopModelViewSet)
 
 urlpatterns = [
     path('reservas/', reservas, name='reservas'),
