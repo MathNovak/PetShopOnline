@@ -1,5 +1,5 @@
 from datetime import date
-from reserva.models import Reserva
+from reserva.models import Reserva, Animal
 from django import forms
 class ReservaForm(forms.ModelForm):
 
@@ -21,3 +21,8 @@ class ReservaForm(forms.ModelForm):
     class Meta:
         model = Reserva
         fields = ['nome','nome_pet','telefone','data', 'petshop','turno','tamanho' ,'observacao']
+
+class AnimalForm(forms.ModelForm):
+    class Meta:
+        model = Animal
+        fields = ['nome', 'idade', 'data_nascimento']
