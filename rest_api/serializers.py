@@ -1,5 +1,8 @@
 from rest_framework.serializers import ModelSerializer, HyperlinkedRelatedField, PrimaryKeyRelatedField, ValidationError
 from typing import List
+'''from rest_framework.authtoken import TokenAuthentication
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.viewsets import ModelViewSet'''
 from rest_framework import generics
 #from termios import CDSUSP
 
@@ -20,6 +23,9 @@ class PetshopNestedModelSerializer(ModelSerializer):
         model = Petshop
         fields = '__all__' 
 
+
+
+
 class PetShopRelatedFieldCustomSerializer(PrimaryKeyRelatedField):
     def __init__(self, **kwargs):
         self.serializer = PetshopNestedModelSerializer
@@ -39,6 +45,8 @@ class AgendamentoModelSerializer(ModelSerializer):
     class Meta:
         model = Reserva
         fields = '__all__'
+
+
 
 
 class AnimalSerializer(ModelSerializer):

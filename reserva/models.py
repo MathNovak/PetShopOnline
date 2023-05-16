@@ -43,6 +43,8 @@ class Petshop(models.Model):
     rua = models.CharField(verbose_name='Endereço', max_length=100)
     numero = models.CharField(verbose_name='Número', max_length=10)
     bairro = models.CharField(verbose_name='Bairro', max_length=50)
+    def __str__(self):
+        return self.nome
 
     def qtd_reservas(self):
         return self.reservas.count()
